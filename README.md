@@ -1,73 +1,113 @@
-# Inkforge
+# 🔨 Inkforge — Deep Writing Refactoring Engine
 
-> Ink + Forge — 锻造文字，重铸思想。
+> **Ink + Forge.** Reforge ideas, reshape words.
 
-深度长文重构引擎。将口语化、碎片化的输入内容转化为结构严谨、逻辑清晰、具有深度洞察的专业长文。
+Adaptive deep writing agent that transforms any input (video interviews, speeches, podcasts, articles) into **coherent, logically rigorous, insight-driven long-form content**.
 
-## 特性
+## ✨ What Makes Inkforge Different
 
-- 🧠 **八层处理系统** — 从需求识别到质量检验的完整链路
-- 📐 **三阶段工作流** — 分析与规划 → 结构设计 → 内容撰写，每步确认后推进
-- ✍️ **写作约束引擎** — 内置7条严格约束，自动消除AI味：
-  - 禁用第一人称
-  - 禁用"不是而是"句式
-  - 禁用"首先/其次/然而/因此/总之/综上所述"
-- 🔍 **自动质量检验** — 完稿后逐项核查字数、禁用词、大纲覆盖率、逻辑连贯性
+Most AI writing tools just polish text. Inkforge **refactors** it — like rewriting code from scratch while preserving the core logic.
 
-## 工作流
+Three signature constraints set Inkforge apart:
+
+| Constraint | Rule | Why |
+|------------|------|-----|
+| 🚫 No first-person | Never use "我/我们" or "I/we" | Forces objective, universal voice |
+| 🚫 No "not-but" pattern | Never write "X不是Y，而是Z" | Eliminates lazy contrast, demands real logic |
+| 🚫 No filler transitions | Never use "首先/其次/然而/因此/总之" | Logic flows through content, not connectors |
+
+## 🧠 Nine-Layer Processing System
+
+| Layer | Name | What it does |
+|-------|------|--------------|
+| 1 | Requirement Identification | Extract principles, audience, scenario from input |
+| 2 | Brief Construction | Build writing baseline (persona, audience, stance) |
+| 3 | Preprocessing | Clean spoken language, remove fillers, detect fragments |
+| 4 | Viewpoint Clustering | Extract & merge similar viewpoints |
+| 5 | Logic Analysis | Map causal, parallel, progressive, contrast relationships |
+| 6 | Structure Optimization | Enhance logic, merge duplicates, preserve framework |
+| 7 | Deep Writing | Supplement background, data, examples |
+| 8 | Quality Check | Verify all constraints and quality standards |
+| 9 | Style Enforcement | Zero first-person, zero "not-but", zero filler transitions |
+
+## 🔄 Three-Stage Workflow
 
 ```
-输入素材 → Stage 1: 分析与规划（Brief + 观点聚类 + 逻辑图谱）
-         → Stage 2: 结构设计（大纲框架）
-         → Stage 3: 内容撰写（深度撰写 + 质量检验）
-         → 输出文章
+Stage 1: Analysis & Planning (20%)
+├─ Requirement ID → Brief → Preprocessing → Clustering → Logic Analysis
+└─ Output: Brief + Viewpoint clusters + Logic graph
+
+Stage 2: Structure Design (30%)
+├─ Structure optimization
+└─ Output: Optimized outline framework
+
+Stage 3: Content Writing (50%)
+├─ Deep writing → Quality check → Style enforcement
+└─ Output: Complete article
 ```
 
-## 安装
+Each stage requires **user confirmation** before proceeding.
 
-### WorkBuddy 用户
+## 📦 Installation
+
+### For WorkBuddy / Claude Code
 
 ```bash
-# 用户级安装（所有项目可用）
-git clone https://github.com/yourname/inkforge.git ~/.workbuddy/skills/inkforge
+# Project-level
+cp -r inkforge/ .workbuddy/skills/inkforge/
 
-# 项目级安装（仅当前项目可用）
-git clone https://github.com/yourname/inkforge.git .workbuddy/skills/inkforge
+# User-level
+cp -r inkforge/ ~/.workbuddy/skills/inkforge/
 ```
 
-### 手动安装
+### For Other AI Platforms
 
-将 `SKILL.md` 复制到你的 skills 目录即可。
+Copy `SKILL.md` into your agent's skill/prompt directory. The file is self-contained and platform-agnostic.
 
-## 使用
-
-在 WorkBuddy 对话中：
+## 🚀 Quick Start
 
 ```
-use inkforge
-帮我把这篇演讲改写为5000字深度长文
+Input:  Any content (interview transcript, speech, article, podcast)
+Output: Deep, structured article (2000-10000 words)
 ```
 
-或直接描述需求：
+**Example prompts:**
+- `use inkforge` then paste your content
+- "Refactor this interview into a 5000-word deep article"
+- "将这篇演讲重构为深度长文"
+
+## 📋 Quality Check Protocol
+
+After Stage 3, Inkforge automatically verifies:
+
+| Check | Standard |
+|-------|----------|
+| Word count | Matches Brief requirement |
+| First-person | 0 occurrences |
+| "Not-but" pattern | 0 occurrences |
+| Filler transitions | 0 occurrences |
+| Structure coverage | Every outline node covered |
+| Logic coherence | Clear relationships between paragraphs |
+
+## 🗂️ Repository Structure
 
 ```
-将这个访谈稿重构为结构严谨的文章
+inkforge/
+├── SKILL.md          # Core skill definition (self-contained)
+├── README.md         # This file
+├── LICENSE           # MIT
+└── .gitignore
 ```
 
-## 约束说明
+## 🤝 Contributing
 
-Inkforge 内置7条写作约束，确保产出文章具有人类写作质感：
+Issues and PRs welcome. Key areas for contribution:
 
-| 编号 | 约束 | 说明 |
-|------|------|------|
-| 1 | 单步执行 | 每次只推进一个阶段 |
-| 2 | 结构锁定 | 大纲确认后不可更改 |
-| 3 | 观点合并 | 相似观点合并，避免重复 |
-| 4 | Brief基准 | 所有撰写以Brief为准 |
-| 5 | 禁用第一人称 | 不用"我""我们" |
-| 6 | 禁用"不是而是" | 用并列/递进/对比替代 |
-| 7 | 禁用过渡词 | 不用"首先/其次/然而/因此/总之" |
+- New style constraints
+- Additional logic analysis patterns
+- Multi-language support
+- Integration with image generation tools
 
-## License
+## 📄 License
 
-MIT
+MIT — use freely, attribute kindly.

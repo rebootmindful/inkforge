@@ -1,87 +1,17 @@
 ---
 name: inkforge
-description: 深度长文重构专家 - 将口语化、碎片化的输入内容转化为结构严谨、逻辑清晰、具有深度洞察的专业长文（2000-10000字）。触发词：深度写作、长文重构、改写文章、深度重写
+description: "Deep writing refactoring engine. See skills/ directory for variants. Triggers: inkforge, 深度写作, 长文重构"
 ---
 
-# Inkforge — 深度长文重构引擎
+# Inkforge — Deep Writing Refactoring Engine
 
-> Ink + Forge. 锻造文字，重铸思想。
+> Ink + Forge. Reforge ideas, reshape words.
 
-## Role
+This repository contains two skill variants:
 
-深度长文重构专家。将口语化、碎片化的输入内容转化为结构严谨、逻辑清晰、具有深度洞察的专业长文。
+| Skill | Directory | Description |
+|-------|-----------|-------------|
+| **inkforge** | `skills/inkforge/` | Core deep writing engine |
+| **inkforge-visual** | `skills/inkforge-visual/` | Deep writing + auto-illustration |
 
-## Core Capabilities（八层处理系统）
-
-1. **需求识别** — 理解用户意图、目标读者、调性要求
-2. **Brief构建** — 生成写作基准文档
-3. **预处理** — 清洗原始素材，提取有效信息
-4. **观点提取与聚类** — 将碎片观点归类合并
-5. **逻辑分析** — 梳理观点间的因果、递进、对比关系
-6. **结构优化** — 设计逻辑递进的文章骨架
-7. **深度撰写** — 基于大纲产出完整文章
-8. **质量检验** — 逐项核查约束与质量标准
-
-## Constraints（严格约束）
-
-1. **单步执行**：严格遵循三阶段工作流，每次只执行一个阶段
-2. **结构不可重组**：大纲确认后不可更改
-3. **观点必须合并**：相似观点合并为一个，避免重复
-4. **Brief是基准**：所有撰写以Brief为准
-5. **禁用第一人称**：全文不得使用"我""我们""让我""我也"等第一人称代词
-6. **禁用"不是而是"句式**：用并列、递进或对比替代，绝不写"X不是Y，而是Z"
-7. **禁用过渡词**：不得使用"首先""其次""然而""因此""总之""综上所述"
-
-## Workflow（三阶段工作流）
-
-### Stage 1：分析与规划
-
-- 读取原始文本，执行需求识别与预处理
-- 提取并聚类观点，进行逻辑分析
-- 生成 Brief 文档、观点聚类结果与逻辑图谱
-- 暂停等待用户确认
-
-### Stage 2：结构设计
-
-- 基于Stage 1成果进行结构优化
-- 输出具备逻辑递进关系的标准大纲框架
-- 暂停等待用户确认
-
-### Stage 3：内容撰写
-
-- 基于确认的大纲进行深度撰写
-- 补充背景、数据与案例
-- 完成后执行质量检验：
-
-| 检验项 | 标准 |
-|--------|------|
-| 字数 | 符合Brief要求 |
-| 第一人称 | 0次 |
-| "不是而是" | 0次 |
-| 禁用过渡词 | 0次 |
-| 大纲覆盖 | 每个大纲节点均有对应段落 |
-| 逻辑连贯 | 段落间有明确的递进/转折/因果关系 |
-
-## 使用方式
-
-```
-use inkforge
-帮我把这个演讲改写为深度长文
-inkforge: 将这篇访谈重构为5000字的文章
-```
-
-## 安装
-
-将本仓库克隆到 WorkBuddy 的 skills 目录：
-
-```bash
-# 项目级
-cp -r inkforge/ .workbuddy/skills/inkforge/
-
-# 用户级
-cp -r inkforge/ ~/.workbuddy/skills/inkforge/
-```
-
-## License
-
-MIT
+See each skill's `SKILL.md` for full documentation.
